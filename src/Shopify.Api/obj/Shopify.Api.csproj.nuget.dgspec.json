@@ -43,6 +43,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Basic.Api.Abstractions": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
             "Core": {
               "target": "Package",
               "version": "[1.0.2, )"

@@ -4,5 +4,15 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="Application\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Basic.Api.Abstractions" Version="1.0.0" />
+    <PackageReference Include="Core" Version="1.0.2" />
+  </ItemGroup>
+
 
 </Project>
