@@ -22,10 +22,7 @@ namespace Shopify.SDK.Test
         [Fact]
         public async Task GetOrderList()
         {
-            //GetJsonFormBI getJson = new GetJsonFormBI();
             var ApiUrl = "https://cf9a3d10c7b1ffcf49fc23d900b64e17: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@linsdcz.myshopify.com";
-            //var req = new OrderRequest(ApiUrl);
-            //var re = getJson.GetDatas(req.CreateUrl());
             var res = await _client.GetRequestAsync<OrderListResponse>(new OrderRequest(ApiUrl));
             Assert.True(res.orders.Count > 0);
         }
