@@ -7,7 +7,12 @@ namespace Shopify.SDK.Models
 {
     public abstract class BaseRequest<T>
     {
-        public abstract string CreaeUrl();
+        public BaseRequest(string url)
+        {
+            this.ApiUrl = url;
+        }
+        public string ApiUrl { get; set; }//抽象属性
+        public abstract string CreateUrl();
     }
 
     #region MyRegion

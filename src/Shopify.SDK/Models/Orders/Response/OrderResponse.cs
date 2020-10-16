@@ -2,34 +2,15 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Shopify.SDK.Models.Orders
+namespace Shopify.SDK.Models.Orders.Response
 {
-
-    public class OrderRequest:BaseRequest<OrderResponse>
-    {
-        public string ApiKey { get; set; }
-        /// <summary>
-        /// 开始时间
-        /// </summary>
-        public DateTime created_at_min { get; set; }
-        /// <summary>
-        /// 结束时间
-        /// </summary>
-        public DateTime created_at_max { get; set; }
-        /// <summary>
-        /// 状态
-        /// </summary>
-        public string status { get; set; }
-      
-
-        public override string CreaeUrl()
-        {
-            return "/admin/api/2020-10/orders.jsonstatus="+this.status+ "&created_at_min ="+this.created_at_min+ "&created_at_max ="+ this.created_at_max;
-        }
-    }
-    public class OrderResponse
+    public class OrderListResponse
     {
         public List<OrderModel> orders { get; set; }
+    }
+
+    public class OrderResponse { 
+         public OrderModel order { get; set; }
     }
     public class OrderModel
     {
@@ -37,7 +18,6 @@ namespace Shopify.SDK.Models.Orders
         /// api 内部ID
         /// </summary>
         public string id { get; set; }
-
         public string email { get; set; }
         public DateTime closed_at { get; set; }
         public DateTime updated_at { get; set; }
@@ -60,7 +40,6 @@ namespace Shopify.SDK.Models.Orders
         /// 物流状态
         /// </summary>
         public string fulfillment_status { get; set; }
-
         /// <summary>
         /// 来源URl
         /// </summary>

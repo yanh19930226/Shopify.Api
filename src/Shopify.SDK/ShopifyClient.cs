@@ -15,14 +15,15 @@ namespace Shopify.SDK
         }
         public Task<T> GetRequestAsync<T>(BaseRequest<T> request)
         {
-            return $"{request.CreaeUrl()}"
-                 .GetAsync()
+            var url = request.CreateUrl();
+            return $"{request.CreateUrl()}"
+                .GetAsync()
                 .ReceiveJson<T>();
         }
         public Task<T> PostRequestAsync<T>(BaseRequest<T> request)
         {
-            return $"{request.CreaeUrl()}"
-                 .GetAsync()
+            return $"{request.CreateUrl()}"
+                .GetAsync()
                 .ReceiveJson<T>();
         }
     }
