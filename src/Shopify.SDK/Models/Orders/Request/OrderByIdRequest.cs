@@ -7,10 +7,11 @@ namespace Shopify.SDK.Models.Orders.Request
 {
     public class OrderByIdRequest : BaseRequest<OrderResponse>
     {
-        public OrderByIdRequest(string url):base(url)
+        public OrderByIdRequest(string url, string apikey, string apivalue) : base(url, apikey, apivalue)
         {
-            
+
         }
+
         public string OrderId { get; set; }
 
         public override string CreateUrl()

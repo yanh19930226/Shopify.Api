@@ -7,7 +7,7 @@ namespace Shopify.SDK.Models.Orders.Request
 {
     public class OrderConditionRequest : BaseRequest<OrderListResponse>
     {
-        public OrderConditionRequest(string url) : base(url)
+        public OrderConditionRequest(string url, string apikey, string apivalue) : base(url, apikey, apivalue)
         {
 
         }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -9,9 +10,11 @@ namespace Shopify.SDK.Models.Orders.Response
         public List<OrderModel> orders { get; set; }
     }
 
-    public class OrderResponse { 
-         public OrderModel order { get; set; }
+    public class OrderResponse {
+        public OrderModel order { get; set; }
     }
+
+   
     public class OrderModel
     {
         /// <summary>
@@ -19,8 +22,8 @@ namespace Shopify.SDK.Models.Orders.Response
         /// </summary>
         public string id { get; set; }
         public string email { get; set; }
-        public DateTime closed_at { get; set; }
-        public DateTime updated_at { get; set; }
+        public string closed_at { get; set; }
+        public string updated_at { get; set; }
         public int number { get; set; }
         public string note { get; set; }
         public string token { get; set; }

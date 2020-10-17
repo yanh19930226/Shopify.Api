@@ -2,7 +2,6 @@ D:\Work\ERP\Shopify.Api\src\Shopify.Api\bin\Debug\netcoreapp3.1\appsettings.Deve
 D:\Work\ERP\Shopify.Api\src\Shopify.Api\bin\Debug\netcoreapp3.1\appsettings.json
 D:\Work\ERP\Shopify.Api\src\Shopify.Api\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 D:\Work\ERP\Shopify.Api\src\Shopify.Api\bin\Debug\netcoreapp3.1\Shopify.Api.exe
-D:\Work\ERP\Shopify.Api\src\Shopify.Api\obj\Debug\netcoreapp3.1\Shopify.Api.csprojAssemblyReference.cache
 D:\Work\ERP\Shopify.Api\src\Shopify.Api\obj\Debug\netcoreapp3.1\Shopify.Api.AssemblyInfoInputs.cache
 D:\Work\ERP\Shopify.Api\src\Shopify.Api\obj\Debug\netcoreapp3.1\Shopify.Api.AssemblyInfo.cs
 D:\Work\ERP\Shopify.Api\src\Shopify.Api\obj\Debug\netcoreapp3.1\Shopify.Api.RazorTargetAssemblyInfo.cache
