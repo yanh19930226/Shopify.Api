@@ -4,6 +4,63 @@
     "D:\\Work\\ERP\\Shopify.Api\\src\\Shopify.Api\\Shopify.Api.csproj": {}
   },
   "projects": {
+    "D:\\Work\\ERP\\Shopify.Api\\src\\Shopify.Api.Abstractions\\Shopify.Api.Abstractions.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Work\\ERP\\Shopify.Api\\src\\Shopify.Api.Abstractions\\Shopify.Api.Abstractions.csproj",
+        "projectName": "Shopify.Api.Abstractions",
+        "projectPath": "D:\\Work\\ERP\\Shopify.Api\\src\\Shopify.Api.Abstractions\\Shopify.Api.Abstractions.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "D:\\Work\\ERP\\Shopify.Api\\src\\Shopify.Api.Abstractions\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://120.78.1.82:8081/repository/nuget-hosted/": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.cnblogs.com/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "D:\\Work\\ERP\\Shopify.Api\\src\\Shopify.Api\\Shopify.Api.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -31,7 +88,14 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\Work\\ERP\\Shopify.Api\\src\\Shopify.Api.Abstractions\\Shopify.Api.Abstractions.csproj": {
+                "projectPath": "D:\\Work\\ERP\\Shopify.Api\\src\\Shopify.Api.Abstractions\\Shopify.Api.Abstractions.csproj"
+              },
+              "D:\\Work\\ERP\\Shopify.Api\\src\\Shopify.SDK\\Shopify.SDK.csproj": {
+                "projectPath": "D:\\Work\\ERP\\Shopify.Api\\src\\Shopify.SDK\\Shopify.SDK.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -66,6 +130,69 @@
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
             },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Work\\ERP\\Shopify.Api\\src\\Shopify.SDK\\Shopify.SDK.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Work\\ERP\\Shopify.Api\\src\\Shopify.SDK\\Shopify.SDK.csproj",
+        "projectName": "Shopify.SDK",
+        "projectPath": "D:\\Work\\ERP\\Shopify.Api\\src\\Shopify.SDK\\Shopify.SDK.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "D:\\Work\\ERP\\Shopify.Api\\src\\Shopify.SDK\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://120.78.1.82:8081/repository/nuget-hosted/": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.cnblogs.com/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Flurl.Http": {
+              "target": "Package",
+              "version": "[2.4.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

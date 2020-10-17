@@ -93,3 +93,4 @@ D:\Work\ERP\Shopify.Api\src\Shopify.Api\bin\Debug\netcoreapp3.1\Basic.Api.Abstra
 D:\Work\ERP\Shopify.Api\src\Shopify.Api\obj\Debug\netcoreapp3.1\Shopify.Api.dll
 D:\Work\ERP\Shopify.Api\src\Shopify.Api\obj\Debug\netcoreapp3.1\Shopify.Api.pdb
 D:\Work\ERP\Shopify.Api\src\Shopify.Api\obj\Debug\netcoreapp3.1\Shopify.Api.genruntimeconfig.cache
+D:\Work\ERP\Shopify.Api\src\Shopify.Api\obj\Debug\netcoreapp3.1\Shopify.Api.csprojAssemblyReference.cache
