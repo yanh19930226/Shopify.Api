@@ -63,7 +63,7 @@
           "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
-      "Basic.Api.Abstractions/1.0.0": {
+      "Basic.Api.Abstractions/1.0.1": {
         "type": "package",
         "compile": {
           "lib/netcoreapp3.1/Basic.Api.Abstractions.dll": {}
@@ -105,7 +105,7 @@
           "lib/netstandard2.0/Consul.dll": {}
         }
       },
-      "Core/1.0.2": {
+      "Core/1.0.3": {
         "type": "package",
         "dependencies": {
           "AutoMapper": "10.0.0",
@@ -2869,13 +2869,13 @@
         "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll"
       ]
     },
-    "Basic.Api.Abstractions/1.0.0": {
-      "sha512": "gd+mlHZE9JuAQg/aFnN4zJpYUvGfRxQlGQw7v0WzHR1n0ep2F7EmHI9oryKAwPcMPhAvziHDyOCIH0thtZwbDA==",
+    "Basic.Api.Abstractions/1.0.1": {
+      "sha512": "tenjZ9Bvu5wrM1r/S2XuHn+bSTG9po/30Z9gfxcR8RizliNrvz6CYRwJxTJ1KtHeEGMPbliSdkmkno/hWuYeAg==",
       "type": "package",
-      "path": "basic.api.abstractions/1.0.0",
+      "path": "basic.api.abstractions/1.0.1",
       "files": [
         ".nupkg.metadata",
-        "basic.api.abstractions.1.0.0.nupkg.sha512",
+        "basic.api.abstractions.1.0.1.nupkg.sha512",
         "basic.api.abstractions.nuspec",
         "lib/netcoreapp3.1/Basic.Api.Abstractions.dll"
       ]
@@ -2918,13 +2918,13 @@
         "lib/netstandard2.0/Consul.dll"
       ]
     },
-    "Core/1.0.2": {
-      "sha512": "DPG3zZvjX5pWw9Isj155/khj5UMxJiHq8803jP5wXaFkMpRi1/3sLzRhmoKRUamM29UXok0Bk1GU5kupyr7CLg==",
+    "Core/1.0.3": {
+      "sha512": "fkQoyZnM/p4ia2vX6kF0FNKnNVvCB4EUiiNxdMk19vmIk2sx9tddpc5Cz7SWC4+2JtNx/rTy4WwsC4HjhPAnyg==",
       "type": "package",
-      "path": "core/1.0.2",
+      "path": "core/1.0.3",
       "files": [
         ".nupkg.metadata",
-        "core.1.0.2.nupkg.sha512",
+        "core.1.0.3.nupkg.sha512",
         "core.nuspec",
         "lib/netcoreapp3.1/Core.dll"
       ]
@@ -8730,8 +8730,8 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "Basic.Api.Abstractions >= 1.0.0",
-      "Core >= 1.0.2",
+      "Basic.Api.Abstractions >= 1.0.1",
+      "Core >= 1.0.3",
       "Shopify.Api.Abstractions >= 1.0.0",
       "Shopify.SDK >= 1.0.0"
     ]
@@ -8788,11 +8788,11 @@
         "dependencies": {
           "Basic.Api.Abstractions": {
             "target": "Package",
-            "version": "[1.0.0, )"
+            "version": "[1.0.1, )"
           },
           "Core": {
             "target": "Package",
-            "version": "[1.0.2, )"
+            "version": "[1.0.3, )"
           }
         },
         "imports": [

@@ -1,5 +1,8 @@
-﻿using Core.EventBus.Abstractions;
+﻿using Core.Data.Domain.Interfaces;
+using Core.EventBus.Abstractions;
+using Core.Extensions;
 using Shopify.Api.Application.IntegrationEvents.Orders;
+using Shopify.Api.Models.Domain;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +12,22 @@ namespace Shopify.Api.Application.IntegrationEventHandlers.Orders
 {
     public class OrderAsyncIntegrationEventHandler : IIntegrationEventHandler<OrderAsyncIntegrationEvent>
     {
-        public Task Handle(OrderAsyncIntegrationEvent @event)
+
+        private readonly IRepository<Order> _orderRepository;
+        private readonly IUnitOfWork _unitOfWork;
+
+        public OrderAsyncIntegrationEventHandler(IRepository<Order> orderRepository, IUnitOfWork unitOfWork)
         {
-            throw new NotImplementedException();
+            _orderRepository = orderRepository;
+            _unitOfWork = unitOfWork;
+        }
+        public async Task Handle(OrderAsyncIntegrationEvent @event)
+        {
+            foreach (var item in @event.EventData.list)
+            {
+                _orderRepository.Add(item.MapTo<Order>());
+            }
+            await _unitOfWork.CommitAsync();
         }
     }
 }

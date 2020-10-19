@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "XnKUvs5nw80gBfkIjBaJNtWBySyaXhGcHDhmtmdBu/DFDoieD154iofzkzPGq0Sy0GWBYenRaoZB0zsMCg4VeQ==",
+  "dgSpecHash": "Oiegq42CF8wYymuBtVQ7qZ//QOwdGZeRqRNThkSQb4SVLBI8dMzeDO1dq2n6NMQuEec9vhVvPyHwGdEInuV3Vw==",
   "success": true,
   "projectFilePath": "D:\\Work\\ERP\\Shopify.Api\\src\\Shopify.Api\\Shopify.Api.csproj",
   "expectedPackageFiles": [
@@ -9,10 +9,10 @@
     "C:\\Users\\Admin\\.nuget\\packages\\autofac.extensions.dependencyinjection\\6.0.0\\autofac.extensions.dependencyinjection.6.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\automapper\\10.0.0\\automapper.10.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.0.1\\automapper.extensions.microsoft.dependencyinjection.8.0.1.nupkg.sha512",
-    "C:\\Users\\Admin\\.nuget\\packages\\basic.api.abstractions\\1.0.0\\basic.api.abstractions.1.0.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\basic.api.abstractions\\1.0.1\\basic.api.abstractions.1.0.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\consul\\1.6.1.1\\consul.1.6.1.1.nupkg.sha512",
-    "C:\\Users\\Admin\\.nuget\\packages\\core\\1.0.2\\core.1.0.2.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\core\\1.0.3\\core.1.0.3.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\dapper\\2.0.30\\dapper.2.0.30.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\dotnetcore.cap\\3.1.0\\dotnetcore.cap.3.1.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\dotnetcore.cap.dashboard\\3.1.0\\dotnetcore.cap.dashboard.3.1.0.nupkg.sha512",

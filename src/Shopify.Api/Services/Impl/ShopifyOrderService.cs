@@ -1,4 +1,5 @@
-﻿using Shopify.SDK;
+﻿using Basic.Api.Abstractions.Dtos.Response.Shop;
+using Shopify.SDK;
 using Shopify.SDK.Models.Orders.Request;
 using Shopify.SDK.Models.Orders.Response;
 using System;
@@ -16,9 +17,9 @@ namespace Shopify.Api.Services.Impl
             _client = client;
         }
 
-        public async Task<OrderListResponse> GetOrderList()
+        public async Task<OrderListResponse> GetOrderList(ShopResponseDto shop)
         {
-            return  await _client.GetRequestAsync<OrderListResponse>(new OrderRequest(ApiUrl, apikey, apivalue));
+            return  await _client.GetRequestAsync<OrderListResponse>(new OrderRequest(shop.ApiUrl, shop.ApiKey, shop.ApiKeyValue));
         }
 
         public void GetOrderListByCondition()

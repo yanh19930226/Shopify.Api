@@ -1,9 +1,9 @@
 D:\Work\ERP\Shopify.Api\src\Shopify.SDK\bin\Debug\netcoreapp3.1\Shopify.SDK.deps.json
 D:\Work\ERP\Shopify.Api\src\Shopify.SDK\bin\Debug\netcoreapp3.1\Shopify.SDK.dll
 D:\Work\ERP\Shopify.Api\src\Shopify.SDK\bin\Debug\netcoreapp3.1\Shopify.SDK.pdb
+D:\Work\ERP\Shopify.Api\src\Shopify.SDK\obj\Debug\netcoreapp3.1\Shopify.SDK.csprojAssemblyReference.cache
 D:\Work\ERP\Shopify.Api\src\Shopify.SDK\obj\Debug\netcoreapp3.1\Shopify.SDK.AssemblyInfoInputs.cache
 D:\Work\ERP\Shopify.Api\src\Shopify.SDK\obj\Debug\netcoreapp3.1\Shopify.SDK.AssemblyInfo.cs
+D:\Work\ERP\Shopify.Api\src\Shopify.SDK\obj\Debug\netcoreapp3.1\Shopify.SDK.csproj.CoreCompileInputs.cache
 D:\Work\ERP\Shopify.Api\src\Shopify.SDK\obj\Debug\netcoreapp3.1\Shopify.SDK.dll
 D:\Work\ERP\Shopify.Api\src\Shopify.SDK\obj\Debug\netcoreapp3.1\Shopify.SDK.pdb
-D:\Work\ERP\Shopify.Api\src\Shopify.SDK\obj\Debug\netcoreapp3.1\Shopify.SDK.csproj.CoreCompileInputs.cache
-D:\Work\ERP\Shopify.Api\src\Shopify.SDK\obj\Debug\netcoreapp3.1\Shopify.SDK.csprojAssemblyReference.cache

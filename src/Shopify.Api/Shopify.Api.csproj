@@ -4,13 +4,22 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>D:\Work\ERP\Shopify.Api\src\Shopify.Api\Shopify.Api.xml</DocumentationFile>
+  </PropertyGroup>
+
   <ItemGroup>
-    <Folder Include="Application\" />
+    <Folder Include="Application\Queries\" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Basic.Api.Abstractions" Version="1.0.0" />
-    <PackageReference Include="Core" Version="1.0.2" />
+    <PackageReference Include="Basic.Api.Abstractions" Version="1.0.1" />
+    <PackageReference Include="Core" Version="1.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Shopify.Api.Abstractions\Shopify.Api.Abstractions.csproj" />
+    <ProjectReference Include="..\Shopify.SDK\Shopify.SDK.csproj" />
   </ItemGroup>
 
 

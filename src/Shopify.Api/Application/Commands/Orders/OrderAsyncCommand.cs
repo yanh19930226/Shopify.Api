@@ -8,5 +8,6 @@ namespace Shopify.Api.Application.Commands.Orders
 {
     public class OrderAsyncCommand : Command
     {
+
     }
 }

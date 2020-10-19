@@ -1,4 +1,5 @@
-﻿using Shopify.SDK.Models.Orders.Response;
+﻿using Basic.Api.Abstractions.Dtos.Response.Shop;
+using Shopify.SDK.Models.Orders.Response;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +9,6 @@ namespace Shopify.Api.Services
 {
     public interface IShopOrderService
     {
-        Task<OrderListResponse> GetOrderList();
+        Task<OrderListResponse> GetOrderList(ShopResponseDto shop);
     }
 }

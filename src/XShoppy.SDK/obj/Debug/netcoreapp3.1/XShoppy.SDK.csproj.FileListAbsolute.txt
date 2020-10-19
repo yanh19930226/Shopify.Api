@@ -1,0 +1,9 @@
+D:\Work\ERP\Shopify.Api\src\XShoppy.SDK\bin\Debug\netcoreapp3.1\XShoppy.SDK.deps.json
+D:\Work\ERP\Shopify.Api\src\XShoppy.SDK\bin\Debug\netcoreapp3.1\XShoppy.SDK.dll
+D:\Work\ERP\Shopify.Api\src\XShoppy.SDK\bin\Debug\netcoreapp3.1\XShoppy.SDK.pdb
+D:\Work\ERP\Shopify.Api\src\XShoppy.SDK\obj\Debug\netcoreapp3.1\XShoppy.SDK.csprojAssemblyReference.cache
+D:\Work\ERP\Shopify.Api\src\XShoppy.SDK\obj\Debug\netcoreapp3.1\XShoppy.SDK.AssemblyInfoInputs.cache
+D:\Work\ERP\Shopify.Api\src\XShoppy.SDK\obj\Debug\netcoreapp3.1\XShoppy.SDK.AssemblyInfo.cs
+D:\Work\ERP\Shopify.Api\src\XShoppy.SDK\obj\Debug\netcoreapp3.1\XShoppy.SDK.csproj.CoreCompileInputs.cache
+D:\Work\ERP\Shopify.Api\src\XShoppy.SDK\obj\Debug\netcoreapp3.1\XShoppy.SDK.dll
+D:\Work\ERP\Shopify.Api\src\XShoppy.SDK\obj\Debug\netcoreapp3.1\XShoppy.SDK.pdb
