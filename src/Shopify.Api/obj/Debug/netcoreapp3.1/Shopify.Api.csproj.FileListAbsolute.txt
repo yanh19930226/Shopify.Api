@@ -90,9 +90,6 @@ D:\Work\ERP\Shopify.Api\src\Shopify.Api\bin\Debug\netcoreapp3.1\Shopify.SDK.pdb
 D:\Work\ERP\Shopify.Api\src\Shopify.Api\obj\Debug\netcoreapp3.1\Shopify.Api.csprojAssemblyReference.cache
 D:\Work\ERP\Shopify.Api\src\Shopify.Api\obj\Debug\netcoreapp3.1\Shopify.Api.AssemblyInfoInputs.cache
 D:\Work\ERP\Shopify.Api\src\Shopify.Api\obj\Debug\netcoreapp3.1\Shopify.Api.AssemblyInfo.cs
-D:\Work\ERP\Shopify.Api\src\Shopify.Api\obj\Debug\netcoreapp3.1\Shopify.Api.csproj.CoreCompileInputs.cache
-D:\Work\ERP\Shopify.Api\src\Shopify.Api\obj\Debug\netcoreapp3.1\Shopify.Api.MvcApplicationPartsAssemblyInfo.cs
-D:\Work\ERP\Shopify.Api\src\Shopify.Api\obj\Debug\netcoreapp3.1\Shopify.Api.MvcApplicationPartsAssemblyInfo.cache
 D:\Work\ERP\Shopify.Api\src\Shopify.Api\obj\Debug\netcoreapp3.1\Shopify.Api.RazorTargetAssemblyInfo.cache
 D:\Work\ERP\Shopify.Api\src\Shopify.Api\obj\Debug\netcoreapp3.1\Shopify.Api.csproj.CopyComplete
 D:\Work\ERP\Shopify.Api\src\Shopify.Api\obj\Debug\netcoreapp3.1\staticwebassets\Shopify.Api.StaticWebAssets.Manifest.cache
@@ -101,3 +98,7 @@ D:\Work\ERP\Shopify.Api\src\Shopify.Api\obj\Debug\netcoreapp3.1\Shopify.Api.dll
 D:\Work\ERP\Shopify.Api\src\Shopify.Api\obj\Debug\netcoreapp3.1\Shopify.Api.pdb
 D:\Work\ERP\Shopify.Api\src\Shopify.Api\obj\Debug\netcoreapp3.1\Shopify.Api.genruntimeconfig.cache
 D:\Work\ERP\Shopify.Api\src\Shopify.Api\bin\Debug\netcoreapp3.1\Shopify.Api.xml
+D:\Work\ERP\Shopify.Api\src\Shopify.Api\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+D:\Work\ERP\Shopify.Api\src\Shopify.Api\obj\Debug\netcoreapp3.1\Shopify.Api.csproj.CoreCompileInputs.cache
+D:\Work\ERP\Shopify.Api\src\Shopify.Api\obj\Debug\netcoreapp3.1\Shopify.Api.MvcApplicationPartsAssemblyInfo.cs
+D:\Work\ERP\Shopify.Api\src\Shopify.Api\obj\Debug\netcoreapp3.1\Shopify.Api.MvcApplicationPartsAssemblyInfo.cache
