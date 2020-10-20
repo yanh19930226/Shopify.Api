@@ -25,7 +25,15 @@ namespace Shopify.Api.Application.IntegrationEventHandlers.Orders
         {
             foreach (var item in @event.EventData.list)
             {
-                _orderRepository.Add(item.MapTo<Order>());
+                var order = _orderRepository.GetAll().Where(p => p.OrderNumber == item.OrderNumber && p.PlatformType == item.PlatformType).FirstOrDefault();
+                if (order!=null)
+                {
+                    _orderRepository.Update(item.MapTo<Order>());
+                }
+                else
+                {
+                    _orderRepository.Add(item.MapTo<Order>());
+                }
             }
             await _unitOfWork.CommitAsync();
         }

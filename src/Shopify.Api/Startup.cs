@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Reflection;
 using System.Threading.Tasks;
 using Core;
@@ -18,6 +19,9 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Shopify.Api.Application.IntegrationEventHandlers.Orders;
 using Shopify.Api.Application.IntegrationEvents.Orders;
+using Shopify.Api.Services;
+using Shopify.Api.Services.Impl;
+using Shopify.SDK;
 
 namespace Shopify.Api
 {
@@ -29,21 +33,31 @@ namespace Shopify.Api
 
         public override void CommonServices(IServiceCollection services)
         {
-            services.AddDbContext<ShopifyContext>(options =>
-            {
-                options.UseMySql(Configuration.GetSection("Zeus:Connection").Value, sql => sql.MigrationsAssembly(typeof(Startup).GetTypeInfo().Assembly.GetName().Name));
-            });
+            //services.AddDbContext<ShopifyContext>(options =>
+            //{
+            //    options.UseMySql(Configuration.GetSection("Zeus:Connection").Value, sql => sql.MigrationsAssembly(typeof(Startup).GetTypeInfo().Assembly.GetName().Name));
+            //});
+
+            services.AddSingleton(new ShopifyClient());
+
+            services
+                 .AddSingleton(new HttpClient())
+                       .AddScoped<IBasicApiService, BasicApiService>()
+                       .AddScoped<IShopOrderService, ShopifyOrderService>();
 
             services.AddCoreSeriLog()
                          .AddCoreSwagger()
-                        //.AddConsul()
+                        .AddConsul()
                        .AddEventBus();
+
+
+           
         }
 
         public override void CommonConfigure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             app.UseCoreSwagger()
-                  //.UseConsul()
+                  .UseConsul()
                   .UseEventBus(eventBus =>
                   {
                        eventBus.Subscribe<OrderAsyncIntegrationEvent, OrderAsyncIntegrationEventHandler>();

@@ -6,7 +6,7 @@ namespace Shopify.Api.Abstractions.IntegrationEventModels.Orders
 {
     public class OrderAsyncIntegrationEventModel
     {
-        public List<OrderAsyncModel> list { get; set; }
+        public List<OrderAsyncModel> list { get; set; } = new List<OrderAsyncModel>();
     }
 
 

@@ -2,13 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Core.Data.Domain.Bus;
+using Core.EventBus.Abstractions;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Shopify.Api.Abstractions.IntegrationEventModels.Orders;
 using Shopify.Api.Application.Commands.Orders;
+using Shopify.Api.Application.IntegrationEvents.Orders;
 
 namespace Shopify.Api.Controllers
 {
-
     /// <summary>
     ///订单
     /// </summary>
@@ -16,11 +19,12 @@ namespace Shopify.Api.Controllers
     [ApiController]
     public class OrderController : Controller
     {
-
-        private IMediator _mediator;
-        public OrderController(IMediator mediator)
+        private readonly IMediatorHandler _bus;
+        private readonly IEventBus _eventBus;
+        public OrderController(IMediatorHandler bus, IEventBus eventBus)
         {
-            _mediator = mediator;
+            _bus = bus;
+            _eventBus = eventBus;
         }
         /// <summary>
         /// 订单同步
@@ -31,7 +35,7 @@ namespace Shopify.Api.Controllers
         public async Task<IActionResult> OrderAsync()
         {
              var command = new OrderAsyncCommand();
-             await _mediator.Send(command);
+             await _bus.SendCommandAsync(command);
              return Ok();
         }
     }

@@ -24,7 +24,7 @@
     ".NETCoreApp,Version=v3.1": {
       "Shopify.Api/1.0.0": {
         "dependencies": {
-          "Basic.Api.Abstractions": "1.0.1",
+          "Basic.Api.Abstractions": "1.0.2",
           "Core": "1.0.3",
           "Microsoft.EntityFrameworkCore.Tools": "3.1.9",
           "Shopify.Api.Abstractions": "1.0.0",
@@ -374,11 +374,11 @@
           "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
-      "Basic.Api.Abstractions/1.0.1": {
+      "Basic.Api.Abstractions/1.0.2": {
         "runtime": {
           "lib/netcoreapp3.1/Basic.Api.Abstractions.dll": {
-            "assemblyVersion": "1.0.1.0",
-            "fileVersion": "1.0.1.0"
+            "assemblyVersion": "1.0.2.0",
+            "fileVersion": "1.0.2.0"
           }
         },
         "compile": {
@@ -4067,12 +4067,12 @@
       "path": "automapper.extensions.microsoft.dependencyinjection/8.0.1",
       "hashPath": "automapper.extensions.microsoft.dependencyinjection.8.0.1.nupkg.sha512"
     },
-    "Basic.Api.Abstractions/1.0.1": {
+    "Basic.Api.Abstractions/1.0.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-tenjZ9Bvu5wrM1r/S2XuHn+bSTG9po/30Z9gfxcR8RizliNrvz6CYRwJxTJ1KtHeEGMPbliSdkmkno/hWuYeAg==",
-      "path": "basic.api.abstractions/1.0.1",
-      "hashPath": "basic.api.abstractions.1.0.1.nupkg.sha512"
+      "sha512": "sha512-Dp4a85f1A7+MttM9IAQJ+LYDVEJQB1RsNc2ecbNPeteEHccLh959QDsg+ro4nBivylfRqyQ1OTgahcz4iiYp9w==",
+      "path": "basic.api.abstractions/1.0.2",
+      "hashPath": "basic.api.abstractions.1.0.2.nupkg.sha512"
     },
     "Castle.Core/4.4.0": {
       "type": "package",

@@ -109,7 +109,7 @@
           "dependencies": {
             "Basic.Api.Abstractions": {
               "target": "Package",
-              "version": "[1.0.1, )"
+              "version": "[1.0.2, )"
             },
             "Core": {
               "target": "Package",

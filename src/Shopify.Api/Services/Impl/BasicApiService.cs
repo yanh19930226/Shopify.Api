@@ -1,4 +1,5 @@
 ﻿using Basic.Api.Abstractions.Dtos.Response.Shop;
+using Core.Result;
 using Core.ServiceDiscovery;
 using Core.ServiceDiscovery.Impletment.LoadBalancer;
 using Core.ServiceDiscovery.Impletment.Provider;
@@ -40,7 +41,8 @@ namespace Shopify.Api.Services.Impl
                 if (response.StatusCode == HttpStatusCode.OK)
                 {
                     var result = await response.Content.ReadAsStringAsync();
-                    return JsonConvert.DeserializeObject<List<ShopResponseDto>>(result);
+                    var res= JsonConvert.DeserializeObject<CoreResult<List<ShopResponseDto>>>(result);
+                    return res.Result;
                 }
             }
             catch (Exception ex)

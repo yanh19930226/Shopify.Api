@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Basic.Api.Abstractions" Version="1.0.1" />
+    <PackageReference Include="Basic.Api.Abstractions" Version="1.0.2" />
     <PackageReference Include="Core" Version="1.0.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.9">
       <PrivateAssets>all</PrivateAssets>

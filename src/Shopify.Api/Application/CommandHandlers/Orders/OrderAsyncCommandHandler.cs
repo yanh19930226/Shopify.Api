@@ -1,12 +1,13 @@
 ﻿using AutoMapper;
+using Basic.Api.Abstractions.Enums;
 using Core.Data.Domain.CommandHandlers;
 using Core.Data.Domain.Interfaces;
 using Core.EventBus.Abstractions;
 using MediatR;
-using Shopify.Api.Abstractions.Enums;
 using Shopify.Api.Abstractions.IntegrationEventModels.Orders;
 using Shopify.Api.Application.Commands.Orders;
 using Shopify.Api.Application.IntegrationEvents.Orders;
+using Shopify.Api.Models.Domain;
 using Shopify.Api.Services;
 using Shopify.SDK;
 using System;
@@ -23,18 +24,16 @@ namespace Shopify.Api.Application.CommandHandlers.Orders
 
         private readonly IShopOrderService _shopOrderService;
 
-        private readonly IMapper _mapper;
-
         private readonly IEventBus _eventBus;
-        public OrderAsyncCommandHandler(IUnitOfWork uow, IBasicApiService basicApiService, IShopOrderService shopOrderService, IMapper mapper, IEventBus eventBus) : base(uow)
+        public OrderAsyncCommandHandler(IUnitOfWork uow, IBasicApiService basicApiService, IShopOrderService shopOrderService, IEventBus eventBus) : base(uow)
         {
             _basicApiService = basicApiService;
             _shopOrderService = shopOrderService;
-            _mapper = mapper;
             _eventBus = eventBus;
         }
         public async Task<bool> Handle(OrderAsyncCommand request, CancellationToken cancellationToken)
         {
+
             var shops = await _basicApiService.GetAllShop();
             foreach (var item in shops)
             {
