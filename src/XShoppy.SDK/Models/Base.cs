@@ -3,24 +3,34 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Shopify.SDK.Models
+namespace XShoppy.SDK
 {
     public abstract class BaseRequest<T>
     {
-        public BaseRequest(string url,string apiKey,string apiValue)
+        public BaseRequest(string apiurl,string apiKey, string apiValue,string shareKey)
         {
-            this.ApiUrl = url;
+            this.ApiUrl = apiurl;
             this.ApiKey = apiKey;
             this.ApiValue = apiValue;
+            this.ShareKey = shareKey;
         }
+        public string ApiUrl { get; set; }
         public string ApiKey { get; set; }
         public string ApiValue { get; set; }
 
-        public string ApiUrl { get; set; }
+        public string ShareKey { get; set; }
+
         public abstract string CreateUrl();
     }
 
-    #region MyRegion
+    public class BaseResponse<T>
+    {
+        public int code { get; set; }
+        public string  msg { get; set; }
+        public T data { get; set; }
+    }
+
+
     public class DataConvert : JsonConverter
     {
         public override bool CanConvert(Type objectType)
@@ -49,6 +59,5 @@ namespace Shopify.SDK.Models
         {
             Console.WriteLine(111);
         }
-    } 
-    #endregion
+    }
 }

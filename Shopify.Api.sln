@@ -13,9 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shopify.SDK", "src\Shopify.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shopify.SDK.Test", "tests\Shopify.SDK.Test\Shopify.SDK.Test.csproj", "{89696A21-3B32-47BA-9939-02146B5B7279}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XShoppy.SDK", "src\XShoppy.SDK\XShoppy.SDK.csproj", "{DC398B04-985E-43B0-9AC3-FC7C5CB03A21}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XShoppy.SDK", "src\XShoppy.SDK\XShoppy.SDK.csproj", "{DC398B04-985E-43B0-9AC3-FC7C5CB03A21}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shopify.Api.Abstractions", "src\Shopify.Api.Abstractions\Shopify.Api.Abstractions.csproj", "{C26F0F54-9926-4CA1-AB08-7BBC81DFBADB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shopify.Api.Abstractions", "src\Shopify.Api.Abstractions\Shopify.Api.Abstractions.csproj", "{C26F0F54-9926-4CA1-AB08-7BBC81DFBADB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XShoppy.SDK.Test", "tests\XShoppy.SDK.Test\XShoppy.SDK.Test.csproj", "{1B093797-17E5-4FFE-8EA0-21202D11CDCA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +45,10 @@ Global
 		{C26F0F54-9926-4CA1-AB08-7BBC81DFBADB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C26F0F54-9926-4CA1-AB08-7BBC81DFBADB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C26F0F54-9926-4CA1-AB08-7BBC81DFBADB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B093797-17E5-4FFE-8EA0-21202D11CDCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B093797-17E5-4FFE-8EA0-21202D11CDCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B093797-17E5-4FFE-8EA0-21202D11CDCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B093797-17E5-4FFE-8EA0-21202D11CDCA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +59,7 @@ Global
 		{89696A21-3B32-47BA-9939-02146B5B7279} = {E1BCEAF5-0D3D-4570-ABCF-57F5235724A9}
 		{DC398B04-985E-43B0-9AC3-FC7C5CB03A21} = {41D0194C-4B1F-4A61-9ACA-937FEFE1331C}
 		{C26F0F54-9926-4CA1-AB08-7BBC81DFBADB} = {41D0194C-4B1F-4A61-9ACA-937FEFE1331C}
+		{1B093797-17E5-4FFE-8EA0-21202D11CDCA} = {E1BCEAF5-0D3D-4570-ABCF-57F5235724A9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {27A42800-1F9C-4B09-82D8-0B70D58E45CA}
