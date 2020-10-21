@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Basic.Api.Abstractions.Dtos.Response.Shop;
 using Basic.Api.Abstractions.Enums;
 using Core.Data.Domain.CommandHandlers;
 using Core.Data.Domain.Interfaces;
@@ -22,24 +23,34 @@ namespace Shopify.Api.Application.CommandHandlers.Orders
     {
         private readonly IBasicApiService _basicApiService;
 
-        private readonly IShopOrderService _shopOrderService;
+        private  IShopOrderService _shopOrderService=null;
 
         private readonly IEventBus _eventBus;
-        public OrderAsyncCommandHandler(IUnitOfWork uow, IBasicApiService basicApiService, IShopOrderService shopOrderService, IEventBus eventBus) : base(uow)
+        public OrderAsyncCommandHandler(IUnitOfWork uow, IBasicApiService basicApiService, /*IShopOrderService shopOrderService,*/ IEventBus eventBus) : base(uow)
         {
             _basicApiService = basicApiService;
-            _shopOrderService = shopOrderService;
+            //_shopOrderService = shopOrderService;
             _eventBus = eventBus;
         }
         public async Task<bool> Handle(OrderAsyncCommand request, CancellationToken cancellationToken)
         {
-
             var shops = await _basicApiService.GetAllShop();
-            foreach (var item in shops)
+            foreach (var item in shops.Where(p=>p.Types== (int)PlatformType.XShoppy))
             {
                 var platformType = item.Types == (int)PlatformType.Shopify ? (int)PlatformType.Shopify : (int)PlatformType.XShoppy;
+
+                if (item.Types == (int)PlatformType.Shopify)
+                {
+                    _shopOrderService=Services.ServiceFactory.CreateOrderService(PlatformType.Shopify);
+                }
+                if (item.Types == (int)PlatformType.XShoppy)
+                {
+                    _shopOrderService = Services.ServiceFactory.CreateOrderService(PlatformType.XShoppy);
+                }
+
                 //店铺订单
                 var shopOrderList = await _shopOrderService.GetOrderList(item);
+
                 var eventModel = new OrderAsyncIntegrationEventModel();
                 foreach (var order in shopOrderList.orders)
                 {

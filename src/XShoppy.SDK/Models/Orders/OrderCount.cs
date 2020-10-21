@@ -6,7 +6,7 @@ namespace XShoppy.SDK.Models.Orders
 {
     public class OrderCountRequest : BaseRequest<BaseResponse<OrderCountResponse>>
     {
-        public OrderCountRequest(string apiurl,string apikey, string apivalue,string sharekey) : base(apiurl,apikey, apivalue, sharekey)
+        public OrderCountRequest(string apikey, string apivalue,string sharekey) : base(apikey, apivalue, sharekey)
         {
 
         }
@@ -15,7 +15,7 @@ namespace XShoppy.SDK.Models.Orders
 
         public override string CreateUrl()
         {
-            return base.ApiUrl+"/order/orders/count";
+            return "/order/orders/count";
         }
     }
 

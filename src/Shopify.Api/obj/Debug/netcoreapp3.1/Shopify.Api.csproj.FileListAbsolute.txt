@@ -102,3 +102,5 @@ D:\Work\ERP\Shopify.Api\src\Shopify.Api\bin\Debug\netcoreapp3.1\Microsoft.Entity
 D:\Work\ERP\Shopify.Api\src\Shopify.Api\obj\Debug\netcoreapp3.1\Shopify.Api.csproj.CoreCompileInputs.cache
 D:\Work\ERP\Shopify.Api\src\Shopify.Api\obj\Debug\netcoreapp3.1\Shopify.Api.MvcApplicationPartsAssemblyInfo.cs
 D:\Work\ERP\Shopify.Api\src\Shopify.Api\obj\Debug\netcoreapp3.1\Shopify.Api.MvcApplicationPartsAssemblyInfo.cache
+D:\Work\ERP\Shopify.Api\src\Shopify.Api\bin\Debug\netcoreapp3.1\XShoppy.SDK.dll
+D:\Work\ERP\Shopify.Api\src\Shopify.Api\bin\Debug\netcoreapp3.1\XShoppy.SDK.pdb

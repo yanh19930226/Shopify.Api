@@ -22,6 +22,7 @@ using Shopify.Api.Application.IntegrationEvents.Orders;
 using Shopify.Api.Services;
 using Shopify.Api.Services.Impl;
 using Shopify.SDK;
+using XShoppy.SDK;
 
 namespace Shopify.Api
 {
@@ -39,19 +40,17 @@ namespace Shopify.Api
             //});
 
             services.AddSingleton(new ShopifyClient());
+            services.AddSingleton(new XShoppyClient());
 
             services
                  .AddSingleton(new HttpClient())
-                       .AddScoped<IBasicApiService, BasicApiService>()
-                       .AddScoped<IShopOrderService, ShopifyOrderService>();
+                       .AddScoped<IBasicApiService, BasicApiService>();
+                       //.AddScoped<IShopOrderService, ShopifyOrderService>();
 
             services.AddCoreSeriLog()
                          .AddCoreSwagger()
                         .AddConsul()
                        .AddEventBus();
-
-
-           
         }
 
         public override void CommonConfigure(IApplicationBuilder app, IWebHostEnvironment env)

@@ -24,11 +24,12 @@
     ".NETCoreApp,Version=v3.1": {
       "Shopify.Api/1.0.0": {
         "dependencies": {
-          "Basic.Api.Abstractions": "1.0.2",
+          "Basic.Api.Abstractions": "1.0.4",
           "Core": "1.0.3",
           "Microsoft.EntityFrameworkCore.Tools": "3.1.9",
           "Shopify.Api.Abstractions": "1.0.0",
           "Shopify.SDK": "1.0.0",
+          "XShoppy.SDK": "1.0.0",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "3.1.0.0",
@@ -374,11 +375,11 @@
           "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
-      "Basic.Api.Abstractions/1.0.2": {
+      "Basic.Api.Abstractions/1.0.4": {
         "runtime": {
           "lib/netcoreapp3.1/Basic.Api.Abstractions.dll": {
-            "assemblyVersion": "1.0.2.0",
-            "fileVersion": "1.0.2.0"
+            "assemblyVersion": "1.0.4.0",
+            "fileVersion": "1.0.4.0"
           }
         },
         "compile": {
@@ -2428,6 +2429,17 @@
           "Shopify.SDK.dll": {}
         }
       },
+      "XShoppy.SDK/1.0.0": {
+        "dependencies": {
+          "Flurl.Http": "2.4.2"
+        },
+        "runtime": {
+          "XShoppy.SDK.dll": {}
+        },
+        "compile": {
+          "XShoppy.SDK.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
         "compile": {
           "Microsoft.AspNetCore.Antiforgery.dll": {}
@@ -4067,12 +4079,12 @@
       "path": "automapper.extensions.microsoft.dependencyinjection/8.0.1",
       "hashPath": "automapper.extensions.microsoft.dependencyinjection.8.0.1.nupkg.sha512"
     },
-    "Basic.Api.Abstractions/1.0.2": {
+    "Basic.Api.Abstractions/1.0.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Dp4a85f1A7+MttM9IAQJ+LYDVEJQB1RsNc2ecbNPeteEHccLh959QDsg+ro4nBivylfRqyQ1OTgahcz4iiYp9w==",
-      "path": "basic.api.abstractions/1.0.2",
-      "hashPath": "basic.api.abstractions.1.0.2.nupkg.sha512"
+      "sha512": "sha512-dhouWKpvZae98dHM1Y1+ij4+Q0/8oZ/nuClXhxjwLjuRiJmnePANyldOFFvrU15/0c1WzzSOrhrCkH4Z9U1H2w==",
+      "path": "basic.api.abstractions/1.0.4",
+      "hashPath": "basic.api.abstractions.1.0.4.nupkg.sha512"
     },
     "Castle.Core/4.4.0": {
       "type": "package",
@@ -5312,6 +5324,11 @@
       "sha512": ""
     },
     "Shopify.SDK/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "XShoppy.SDK/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

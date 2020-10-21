@@ -6,3 +6,4 @@ D:\Work\ERP\Shopify.Api\src\XShoppy.SDK\obj\Debug\netcoreapp3.1\XShoppy.SDK.Asse
 D:\Work\ERP\Shopify.Api\src\XShoppy.SDK\obj\Debug\netcoreapp3.1\XShoppy.SDK.dll
 D:\Work\ERP\Shopify.Api\src\XShoppy.SDK\obj\Debug\netcoreapp3.1\XShoppy.SDK.pdb
 D:\Work\ERP\Shopify.Api\src\XShoppy.SDK\obj\Debug\netcoreapp3.1\XShoppy.SDK.csprojAssemblyReference.cache
+D:\Work\ERP\Shopify.Api\src\XShoppy.SDK\obj\Debug\netcoreapp3.1\XShoppy.SDK.csproj.CoreCompileInputs.cache

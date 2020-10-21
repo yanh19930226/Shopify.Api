@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Basic.Api.Abstractions" Version="1.0.2" />
+    <PackageReference Include="Basic.Api.Abstractions" Version="1.0.4" />
     <PackageReference Include="Core" Version="1.0.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.9">
       <PrivateAssets>all</PrivateAssets>
@@ -24,6 +24,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Shopify.Api.Abstractions\Shopify.Api.Abstractions.csproj" />
     <ProjectReference Include="..\Shopify.SDK\Shopify.SDK.csproj" />
+    <ProjectReference Include="..\XShoppy.SDK\XShoppy.SDK.csproj" />
   </ItemGroup>
 
 

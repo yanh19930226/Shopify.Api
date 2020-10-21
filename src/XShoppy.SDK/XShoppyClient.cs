@@ -8,21 +8,19 @@ namespace XShoppy.SDK
 {
     public class XShoppyClient
     {
-        //private readonly EnvEnum _envEnum;
-        public XShoppyClient(/*EnvEnum envEnum*/)
+        private readonly EnvEnum _envEnum;
+        public XShoppyClient(EnvEnum envEnum= EnvEnum.Prod)
         {
-            //_envEnum = envEnum;
+            _envEnum = envEnum;
         }
         public Task<T> GetRequestAsync<T>(BaseRequest<T> request)
         {
-            return $"{request.ApiUrl+request.CreateUrl()}"
+            return $"{GetApiBaseUrl()}{request.CreateUrl()}"
                 .WithBasicAuth(request.ApiKey, request.ApiValue)
                 .WithHeader("X-SAIL-ACCESS-TOKEN", request.ShareKey)
                 .GetAsync()
                 .ReceiveJson<T>();
         }
-
-
 
         public Task<T> PostRequestAsync<T>(BaseRequest<T> request)
         {
@@ -31,17 +29,17 @@ namespace XShoppy.SDK
                 .ReceiveJson<T>();
         }
 
-        //private string GetApiBaseUrl()
-        //{
-        //    switch (_envEnum)
-        //    {
-        //        case EnvEnum.SandBox:
-        //            return "http://gztest.glitzcloud.com/agent/v1/";
-        //        case EnvEnum.Prod:
-        //            return "https://ssl.glitzcloud.com/agent/v1/";
-        //        default:
-        //            return "http://gztest.glitzcloud.com/agent/v1/";
-        //    }
-        //}
+        private string GetApiBaseUrl()
+        {
+            switch (_envEnum)
+            {
+                case EnvEnum.SandBox:
+                    return "https://openapi.xshoppy.top";
+                case EnvEnum.Prod:
+                    return "https://openapi.xshoppy.shop";
+                default:
+                    return "https://openapi.xshoppy.top";
+            }
+        }
     }
 }

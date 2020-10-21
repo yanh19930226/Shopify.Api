@@ -4,4 +4,14 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Flurl.Http" Version="2.4.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\Products\" />
+    <Folder Include="Models\Stores\" />
+    <Folder Include="Models\Categorys\" />
+  </ItemGroup>
+
 </Project>

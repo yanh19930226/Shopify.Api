@@ -7,14 +7,12 @@ namespace XShoppy.SDK
 {
     public abstract class BaseRequest<T>
     {
-        public BaseRequest(string apiurl,string apiKey, string apiValue,string shareKey)
+        public BaseRequest(string apiKey, string apiValue,string shareKey)
         {
-            this.ApiUrl = apiurl;
             this.ApiKey = apiKey;
             this.ApiValue = apiValue;
             this.ShareKey = shareKey;
         }
-        public string ApiUrl { get; set; }
         public string ApiKey { get; set; }
         public string ApiValue { get; set; }
 

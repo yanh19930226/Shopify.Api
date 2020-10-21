@@ -63,7 +63,7 @@
           "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
-      "Basic.Api.Abstractions/1.0.2": {
+      "Basic.Api.Abstractions/1.0.4": {
         "type": "package",
         "compile": {
           "lib/netcoreapp3.1/Basic.Api.Abstractions.dll": {}
@@ -2812,6 +2812,19 @@
         "runtime": {
           "bin/placeholder/Shopify.SDK.dll": {}
         }
+      },
+      "XShoppy.SDK/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Flurl.Http": "2.4.2"
+        },
+        "compile": {
+          "bin/placeholder/XShoppy.SDK.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/XShoppy.SDK.dll": {}
+        }
       }
     }
   },
@@ -2897,13 +2910,13 @@
         "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll"
       ]
     },
-    "Basic.Api.Abstractions/1.0.2": {
-      "sha512": "Dp4a85f1A7+MttM9IAQJ+LYDVEJQB1RsNc2ecbNPeteEHccLh959QDsg+ro4nBivylfRqyQ1OTgahcz4iiYp9w==",
+    "Basic.Api.Abstractions/1.0.4": {
+      "sha512": "dhouWKpvZae98dHM1Y1+ij4+Q0/8oZ/nuClXhxjwLjuRiJmnePANyldOFFvrU15/0c1WzzSOrhrCkH4Z9U1H2w==",
       "type": "package",
-      "path": "basic.api.abstractions/1.0.2",
+      "path": "basic.api.abstractions/1.0.4",
       "files": [
         ".nupkg.metadata",
-        "basic.api.abstractions.1.0.2.nupkg.sha512",
+        "basic.api.abstractions.1.0.4.nupkg.sha512",
         "basic.api.abstractions.nuspec",
         "lib/netcoreapp3.1/Basic.Api.Abstractions.dll"
       ]
@@ -8794,15 +8807,21 @@
       "type": "project",
       "path": "../Shopify.SDK/Shopify.SDK.csproj",
       "msbuildProject": "../Shopify.SDK/Shopify.SDK.csproj"
+    },
+    "XShoppy.SDK/1.0.0": {
+      "type": "project",
+      "path": "../XShoppy.SDK/XShoppy.SDK.csproj",
+      "msbuildProject": "../XShoppy.SDK/XShoppy.SDK.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "Basic.Api.Abstractions >= 1.0.2",
+      "Basic.Api.Abstractions >= 1.0.4",
       "Core >= 1.0.3",
       "Microsoft.EntityFrameworkCore.Tools >= 3.1.9",
       "Shopify.Api.Abstractions >= 1.0.0",
-      "Shopify.SDK >= 1.0.0"
+      "Shopify.SDK >= 1.0.0",
+      "XShoppy.SDK >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -8842,6 +8861,9 @@
             },
             "D:\\Work\\ERP\\Shopify.Api\\src\\Shopify.SDK\\Shopify.SDK.csproj": {
               "projectPath": "D:\\Work\\ERP\\Shopify.Api\\src\\Shopify.SDK\\Shopify.SDK.csproj"
+            },
+            "D:\\Work\\ERP\\Shopify.Api\\src\\XShoppy.SDK\\XShoppy.SDK.csproj": {
+              "projectPath": "D:\\Work\\ERP\\Shopify.Api\\src\\XShoppy.SDK\\XShoppy.SDK.csproj"
             }
           }
         }
@@ -8857,7 +8879,7 @@
         "dependencies": {
           "Basic.Api.Abstractions": {
             "target": "Package",
-            "version": "[1.0.2, )"
+            "version": "[1.0.4, )"
           },
           "Core": {
             "target": "Package",

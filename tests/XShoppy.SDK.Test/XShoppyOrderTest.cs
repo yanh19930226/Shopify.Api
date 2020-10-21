@@ -9,27 +9,56 @@ namespace XShoppy.SDK.Test
     {
         private XShoppyClient _client;
 
-        private string ApiUrl = "https://5ab2eea6cec93b40ecec4a82cdb9e275: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@gvabnck.myshopify.com";
+        private string apikey = "de757a56cae07088321f61142981b2e17c3b5723";
 
-        private string apikey = "5ab2eea6cec93b40ecec4a82cdb9e275";
+        private string apivalue = "c0e1860d295f405fbacdc299cc2dc2e4ab87094d";
 
-        private string apivalue = "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";
+        private string sharekey = "38be8fc30b98edbf57076612cf48f06b6bc0b9de";
 
-        private string sharekey = "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";
-
-        public XShoppyOrderTest(XShoppyClient client)
+        public XShoppyOrderTest()
         {
-            _client = client;
+            _client = new XShoppyClient();
+        }
+
+        /// <summary>
+        /// 订单Id获取订单
+        /// </summary>
+        /// <returns></returns>
+        [Fact]
+        public async Task GetOrderById()
+        {
+            var res = await _client.GetRequestAsync(new OrderByIdRequest(apikey, apivalue, sharekey)
+            {
+                id = "201018105037101"
+            }); 
+            Assert.True(res.code == 0);
         }
         /// <summary>
-        /// 获取所有订单
+        /// 获取所有订单数量
         /// </summary>
         /// <returns></returns>
         [Fact]
         public async Task GetOrderCount()
         {
-            var res = await _client.GetRequestAsync(new OrderCountRequest(ApiUrl, apikey, apivalue,sharekey));
+            var res = await _client.GetRequestAsync(new OrderCountRequest(apikey, apivalue,sharekey));
             Assert.True(res.code==0);
         }
+        /// <summary>
+        /// 获取订单列表
+        /// </summary>
+        /// <returns></returns>
+        [Fact]
+        public async Task GetOrderList()
+        {
+            var res = await _client.GetRequestAsync(new OrderListRequest(apikey, apivalue, sharekey)
+            {
+                //time_start = DateTime.Now,
+                //time_end= DateTime.Now,
+                page=1,
+                limit=100
+            }) ;
+            Assert.True(res.code == 0);
+        }
+
     }
 }
