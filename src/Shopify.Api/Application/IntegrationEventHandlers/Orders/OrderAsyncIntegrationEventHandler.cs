@@ -25,14 +25,17 @@ namespace Shopify.Api.Application.IntegrationEventHandlers.Orders
         {
             foreach (var item in @event.EventData.list)
             {
-                var order = _orderRepository.GetAll().Where(p => p.OrderNumber == item.OrderNumber && p.PlatformType == item.PlatformType).FirstOrDefault();
+                var order = _orderRepository.GetAll().Where(p => p.OrderNumber == item.OrderNumber && p.PlatformType == item.PlatformType&&p.ShopId==item.ShopId).FirstOrDefault();
                 if (order!=null)
                 {
+                    order.ShopId = @event.EventData.ShopId;
                     _orderRepository.Update(item.MapTo<Order>());
                 }
                 else
                 {
-                    _orderRepository.Add(item.MapTo<Order>());
+                    var newOrder = item.MapTo<Order>();
+                    newOrder.ShopId = @event.EventData.ShopId;
+                    _orderRepository.Add(newOrder);
                 }
             }
             await _unitOfWork.CommitAsync();

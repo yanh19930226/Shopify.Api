@@ -23,19 +23,21 @@ namespace Shopify.Api.Application.CommandHandlers.Orders
     {
         private readonly IBasicApiService _basicApiService;
 
+        private  IRepository<Order> _orderRepository;
+
         private  IShopOrderService _shopOrderService=null;
 
         private readonly IEventBus _eventBus;
-        public OrderAsyncCommandHandler(IUnitOfWork uow, IBasicApiService basicApiService, /*IShopOrderService shopOrderService,*/ IEventBus eventBus) : base(uow)
+        public OrderAsyncCommandHandler(IUnitOfWork uow, IBasicApiService basicApiService, IRepository<Order> orderRepository, IEventBus eventBus) : base(uow)
         {
             _basicApiService = basicApiService;
-            //_shopOrderService = shopOrderService;
+            _orderRepository = orderRepository;
             _eventBus = eventBus;
         }
         public async Task<bool> Handle(OrderAsyncCommand request, CancellationToken cancellationToken)
         {
             var shops = await _basicApiService.GetAllShop();
-            foreach (var item in shops.Where(p=>p.Types== (int)PlatformType.XShoppy))
+            foreach (var item in shops)
             {
                 var platformType = item.Types == (int)PlatformType.Shopify ? (int)PlatformType.Shopify : (int)PlatformType.XShoppy;
 
@@ -47,34 +49,23 @@ namespace Shopify.Api.Application.CommandHandlers.Orders
                 {
                     _shopOrderService = Services.ServiceFactory.CreateOrderService(PlatformType.XShoppy);
                 }
+                //如果数据库的这种平台这个店铺的订单为0,获取全量订单,如果数据库这个种平台这个店铺的订单数不为0,获取增量订单
+                var orders = _orderRepository.GetAll().Where(p => p.PlatformType == item.Types&&p.ShopId==item.Id);
 
-                //店铺订单
-                var shopOrderList = await _shopOrderService.GetOrderList(item);
+                var shopOrderList = new List<OrderAsyncModel>();
 
-                var eventModel = new OrderAsyncIntegrationEventModel();
-                foreach (var order in shopOrderList.orders)
+                //增量订单
+                if (orders.Any())
                 {
-                    OrderAsyncModel add = new OrderAsyncModel
-                    {
-                        PlatformType = platformType,
-                        PlatformId = order.id,
-                        Email = order.email,
-                        OrderCloseTime = order.closed_at,
-                        OrderUpdateTime = order.updated_at,
-                        OrderCreateTime = order.created_at,
-                        Phone = order.phone,
-                        OrderNumber = order.number,
-                        Note = order.note,
-                        Currency = order.currency,
-                        TotalPrice = order.total_price,
-                        FinancialStatus = order.financial_status,
-                        FulfillmentStatus = order.fulfillment_status,
-                        LandingSite = order.landing_site,
-                        Name = order.name,
-                        TotalPriceUsd = order.total_price_usd
-                    };
-                    eventModel.list.Add(add);
+                     shopOrderList = await _shopOrderService.GetOrderList(item,DateTime.Now.AddDays(-1),DateTime.Now);
                 }
+                else//全量订单
+                {
+                     shopOrderList = await _shopOrderService.GetOrderList(item, DateTime.Now.AddYears(-1), DateTime.Now);
+                }
+                var eventModel = new OrderAsyncIntegrationEventModel();
+                eventModel.ShopId= item.Id;
+                eventModel.list = shopOrderList;
                 _eventBus.Publish(new OrderAsyncIntegrationEvent(eventModel));
             }
             return await CommitAsync();

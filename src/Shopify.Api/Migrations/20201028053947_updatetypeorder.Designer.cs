@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Shopify.Api;
 
 namespace Shopify.Api.Migrations
 {
     [DbContext(typeof(ShopifyContext))]
-    partial class ShopifyContextModelSnapshot : ModelSnapshot
+    [Migration("20201028053947_updatetypeorder")]
+    partial class updatetypeorder
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

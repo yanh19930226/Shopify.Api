@@ -6,6 +6,7 @@ namespace Shopify.Api.Abstractions.IntegrationEventModels.Orders
 {
     public class OrderAsyncIntegrationEventModel
     {
+        public long ShopId { get; set; }
         public List<OrderAsyncModel> list { get; set; } = new List<OrderAsyncModel>();
     }
 
@@ -17,9 +18,13 @@ namespace Shopify.Api.Abstractions.IntegrationEventModels.Orders
         /// </summary>
         public int PlatformType { get; set; }
         /// <summary>
-        /// 平台Id
+        /// 平台订单主键Id
         /// </summary>
-        public string PlatformId { get; set; }
+        public string PlatformOrderId { get; set; }
+        /// <summary>
+        /// ShopId
+        /// </summary>
+        public long ShopId { get; set; }
         /// <summary>
         /// 邮件
         /// </summary>
@@ -43,7 +48,7 @@ namespace Shopify.Api.Abstractions.IntegrationEventModels.Orders
         /// <summary>
         /// OrderNumber
         /// </summary>
-        public int OrderNumber { get; set; }
+        public string OrderNumber { get; set; }
         /// <summary>
         /// 备注
         /// </summary>

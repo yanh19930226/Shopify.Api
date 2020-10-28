@@ -19,6 +19,10 @@ namespace XShoppy.SDK.Models.Orders
         public string total_weight { set; get; }
         public string currency { set; get; }
         public string financial_status { set; get; }
+        public string fulfillment_status { set; get; }
+
+        public string landing_site { set; get; }
+
         public string order_number { set; get; }
         public string order_name { set; get; }
         public DateTime pay_time { set; get; }

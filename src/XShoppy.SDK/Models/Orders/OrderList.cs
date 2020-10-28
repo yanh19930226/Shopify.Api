@@ -31,7 +31,7 @@ namespace XShoppy.SDK.Models.Orders
 
         public override string CreateUrl()
         {
-            return "/order/orders/list?limit="+this.limit+ "&page="+this.page;
+            return "/order/orders/list?limit="+this.limit+ "&page="+this.page+ "&time_start="+ TimeStampConvert.ToLong(time_start)+ "&time_end="+ TimeStampConvert.ToLong(time_end);
         }
     }
 
@@ -45,4 +45,39 @@ namespace XShoppy.SDK.Models.Orders
         public List<OrderModel> data { get; set; }
 
     }
+
+    // <summary>
+    /// DateTime时间格式转换为Unix时间戳格式(int类型)
+    /// </summary>
+    public static class TimeStampConvert
+    {
+
+        /// <summary>
+        /// 时间戳转为C#格式时间
+        /// </summary>
+        /// <param name="timeStamp"></param>
+        /// <returns></returns>
+        public static DateTime ToDateTime(int timeStamp)
+        {
+            DateTime dateTimeStart = TimeZone.CurrentTimeZone.ToLocalTime(new DateTime(1970, 1, 1));
+            long lTime = long.Parse(timeStamp.ToString() + "0000000");
+            TimeSpan toNow = new TimeSpan(lTime);
+
+            return dateTimeStart.Add(toNow);
+        }
+
+        /// <summary>
+        /// DateTime时间格式转换为Unix时间戳格式
+        /// </summary>
+        /// <param name="time"></param>
+        /// <returns></returns>
+        public static long ToLong(System.DateTime time)
+        {
+            System.DateTime startTime = TimeZone.CurrentTimeZone.ToLocalTime(new System.DateTime(1970, 1, 1));
+            return (long)(time - startTime).TotalSeconds;
+        }
+
+    }
+
+
 }

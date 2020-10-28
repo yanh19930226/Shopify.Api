@@ -15,7 +15,11 @@ namespace Shopify.Api.Models.Domain
         /// <summary>
         /// 平台Id
         /// </summary>
-        public string PlatformId { get; set; }
+        public string PlatformOrderId { get; set; }
+        /// <summary>
+        /// 店铺Id
+        /// </summary>
+        public long ShopId { get; set; }
         /// <summary>
         /// 邮件
         /// </summary>
@@ -39,7 +43,7 @@ namespace Shopify.Api.Models.Domain
         /// <summary>
         /// OrderNumber
         /// </summary>
-        public int OrderNumber { get; set; }
+        public string OrderNumber { get; set; }
         /// <summary>
         /// 备注
         /// </summary>

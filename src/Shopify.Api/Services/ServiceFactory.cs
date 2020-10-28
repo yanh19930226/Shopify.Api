@@ -1,4 +1,5 @@
-﻿using Basic.Api.Abstractions.Enums;
+﻿using AutoMapper;
+using Basic.Api.Abstractions.Enums;
 using Shopify.Api.Services.Impl;
 using Shopify.SDK;
 using System;
@@ -9,28 +10,22 @@ using XShoppy.SDK;
 
 namespace Shopify.Api.Services
 {
-    public class ServiceFactory
+    public  class ServiceFactory
     {
-        private static XShoppyClient _xclient;
-
-        private static ShopifyClient _sclient;
-        private   IServiceProvider _serviceProvider;
-        public ServiceFactory(IServiceProvider provider, XShoppyClient xclient, ShopifyClient sclient)
+        public ServiceFactory()
         {
-            _serviceProvider = provider;
-            _xclient = xclient;
-            _sclient = sclient;
+           
         }
-        public  static IShopOrderService CreateOrderService(PlatformType type)
+        public static IShopOrderService CreateOrderService(PlatformType type)
         {
             IShopOrderService orderService = null;
             switch (type)
             {
                 case PlatformType.Shopify:
-                    orderService = new ShopifyOrderService(_sclient);
+                    orderService = new ShopifyOrderService(new ShopifyClient());
                     break;
                 case PlatformType.XShoppy:
-                    orderService = new XShoppyOrderService(_xclient);
+                    orderService = new XShoppyOrderService(new XShoppyClient());
                     break;
                 default:
                     break;

@@ -34,18 +34,13 @@ namespace Shopify.Api
 
         public override void CommonServices(IServiceCollection services)
         {
-            //services.AddDbContext<ShopifyContext>(options =>
-            //{
-            //    options.UseMySql(Configuration.GetSection("Zeus:Connection").Value, sql => sql.MigrationsAssembly(typeof(Startup).GetTypeInfo().Assembly.GetName().Name));
-            //});
-
-            services.AddSingleton(new ShopifyClient());
-            services.AddSingleton(new XShoppyClient());
-
+            services.AddDbContext<ShopifyContext>(options =>
+            {
+                options.UseMySql(Configuration.GetSection("Zeus:Connection").Value, sql => sql.MigrationsAssembly(typeof(Startup).GetTypeInfo().Assembly.GetName().Name));
+            });
             services
                  .AddSingleton(new HttpClient())
                        .AddScoped<IBasicApiService, BasicApiService>();
-                       //.AddScoped<IShopOrderService, ShopifyOrderService>();
 
             services.AddCoreSeriLog()
                          .AddCoreSwagger()

@@ -1,4 +1,5 @@
 ﻿using Basic.Api.Abstractions.Dtos.Response.Shop;
+using Shopify.Api.Abstractions.IntegrationEventModels.Orders;
 using Shopify.SDK.Models.Orders.Response;
 using System;
 using System.Collections.Generic;
@@ -9,6 +10,6 @@ namespace Shopify.Api.Services
 {
     public interface IShopOrderService
     {
-        Task<OrderListResponse> GetOrderList(ShopResponseDto shop);
+        Task<List<OrderAsyncModel>> GetOrderList(ShopResponseDto shop, DateTime startTime, DateTime endTime);
     }
 }

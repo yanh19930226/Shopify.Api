@@ -7,6 +7,7 @@ D:\Work\ERP\Shopify.Api\src\Shopify.Api\bin\Debug\netcoreapp3.1\Shopify.Api.runt
 D:\Work\ERP\Shopify.Api\src\Shopify.Api\bin\Debug\netcoreapp3.1\Shopify.Api.runtimeconfig.dev.json
 D:\Work\ERP\Shopify.Api\src\Shopify.Api\bin\Debug\netcoreapp3.1\Shopify.Api.dll
 D:\Work\ERP\Shopify.Api\src\Shopify.Api\bin\Debug\netcoreapp3.1\Shopify.Api.pdb
+D:\Work\ERP\Shopify.Api\src\Shopify.Api\bin\Debug\netcoreapp3.1\Shopify.Api.xml
 D:\Work\ERP\Shopify.Api\src\Shopify.Api\bin\Debug\netcoreapp3.1\ThriftNetStandard.dll
 D:\Work\ERP\Shopify.Api\src\Shopify.Api\bin\Debug\netcoreapp3.1\Autofac.dll
 D:\Work\ERP\Shopify.Api\src\Shopify.Api\bin\Debug\netcoreapp3.1\Autofac.Extensions.DependencyInjection.dll
@@ -32,6 +33,7 @@ D:\Work\ERP\Shopify.Api\src\Shopify.Api\bin\Debug\netcoreapp3.1\Microsoft.Bcl.Ha
 D:\Work\ERP\Shopify.Api\src\Shopify.Api\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
 D:\Work\ERP\Shopify.Api\src\Shopify.Api\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
 D:\Work\ERP\Shopify.Api\src\Shopify.Api\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Work\ERP\Shopify.Api\src\Shopify.Api\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
 D:\Work\ERP\Shopify.Api\src\Shopify.Api\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Proxies.dll
 D:\Work\ERP\Shopify.Api\src\Shopify.Api\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
 D:\Work\ERP\Shopify.Api\src\Shopify.Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
@@ -85,11 +87,16 @@ D:\Work\ERP\Shopify.Api\src\Shopify.Api\bin\Debug\netcoreapp3.1\zipkin4net.dll
 D:\Work\ERP\Shopify.Api\src\Shopify.Api\bin\Debug\netcoreapp3.1\zh\DotNetCore.CAP.Dashboard.resources.dll
 D:\Work\ERP\Shopify.Api\src\Shopify.Api\bin\Debug\netcoreapp3.1\Shopify.Api.Abstractions.dll
 D:\Work\ERP\Shopify.Api\src\Shopify.Api\bin\Debug\netcoreapp3.1\Shopify.SDK.dll
+D:\Work\ERP\Shopify.Api\src\Shopify.Api\bin\Debug\netcoreapp3.1\XShoppy.SDK.dll
 D:\Work\ERP\Shopify.Api\src\Shopify.Api\bin\Debug\netcoreapp3.1\Shopify.Api.Abstractions.pdb
 D:\Work\ERP\Shopify.Api\src\Shopify.Api\bin\Debug\netcoreapp3.1\Shopify.SDK.pdb
+D:\Work\ERP\Shopify.Api\src\Shopify.Api\bin\Debug\netcoreapp3.1\XShoppy.SDK.pdb
 D:\Work\ERP\Shopify.Api\src\Shopify.Api\obj\Debug\netcoreapp3.1\Shopify.Api.csprojAssemblyReference.cache
 D:\Work\ERP\Shopify.Api\src\Shopify.Api\obj\Debug\netcoreapp3.1\Shopify.Api.AssemblyInfoInputs.cache
 D:\Work\ERP\Shopify.Api\src\Shopify.Api\obj\Debug\netcoreapp3.1\Shopify.Api.AssemblyInfo.cs
+D:\Work\ERP\Shopify.Api\src\Shopify.Api\obj\Debug\netcoreapp3.1\Shopify.Api.csproj.CoreCompileInputs.cache
+D:\Work\ERP\Shopify.Api\src\Shopify.Api\obj\Debug\netcoreapp3.1\Shopify.Api.MvcApplicationPartsAssemblyInfo.cs
+D:\Work\ERP\Shopify.Api\src\Shopify.Api\obj\Debug\netcoreapp3.1\Shopify.Api.MvcApplicationPartsAssemblyInfo.cache
 D:\Work\ERP\Shopify.Api\src\Shopify.Api\obj\Debug\netcoreapp3.1\Shopify.Api.RazorTargetAssemblyInfo.cache
 D:\Work\ERP\Shopify.Api\src\Shopify.Api\obj\Debug\netcoreapp3.1\Shopify.Api.csproj.CopyComplete
 D:\Work\ERP\Shopify.Api\src\Shopify.Api\obj\Debug\netcoreapp3.1\staticwebassets\Shopify.Api.StaticWebAssets.Manifest.cache
@@ -97,10 +104,3 @@ D:\Work\ERP\Shopify.Api\src\Shopify.Api\obj\Debug\netcoreapp3.1\staticwebassets\
 D:\Work\ERP\Shopify.Api\src\Shopify.Api\obj\Debug\netcoreapp3.1\Shopify.Api.dll
 D:\Work\ERP\Shopify.Api\src\Shopify.Api\obj\Debug\netcoreapp3.1\Shopify.Api.pdb
 D:\Work\ERP\Shopify.Api\src\Shopify.Api\obj\Debug\netcoreapp3.1\Shopify.Api.genruntimeconfig.cache
-D:\Work\ERP\Shopify.Api\src\Shopify.Api\bin\Debug\netcoreapp3.1\Shopify.Api.xml
-D:\Work\ERP\Shopify.Api\src\Shopify.Api\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
-D:\Work\ERP\Shopify.Api\src\Shopify.Api\obj\Debug\netcoreapp3.1\Shopify.Api.csproj.CoreCompileInputs.cache
-D:\Work\ERP\Shopify.Api\src\Shopify.Api\obj\Debug\netcoreapp3.1\Shopify.Api.MvcApplicationPartsAssemblyInfo.cs
-D:\Work\ERP\Shopify.Api\src\Shopify.Api\obj\Debug\netcoreapp3.1\Shopify.Api.MvcApplicationPartsAssemblyInfo.cache
-D:\Work\ERP\Shopify.Api\src\Shopify.Api\bin\Debug\netcoreapp3.1\XShoppy.SDK.dll
-D:\Work\ERP\Shopify.Api\src\Shopify.Api\bin\Debug\netcoreapp3.1\XShoppy.SDK.pdb

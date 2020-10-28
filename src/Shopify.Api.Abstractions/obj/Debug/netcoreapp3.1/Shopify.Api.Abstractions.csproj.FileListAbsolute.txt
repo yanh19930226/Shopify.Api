@@ -1,7 +1,6 @@
 D:\Work\ERP\Shopify.Api\src\Shopify.Api.Abstractions\bin\Debug\netcoreapp3.1\Shopify.Api.Abstractions.deps.json
 D:\Work\ERP\Shopify.Api\src\Shopify.Api.Abstractions\bin\Debug\netcoreapp3.1\Shopify.Api.Abstractions.dll
 D:\Work\ERP\Shopify.Api\src\Shopify.Api.Abstractions\bin\Debug\netcoreapp3.1\Shopify.Api.Abstractions.pdb
-D:\Work\ERP\Shopify.Api\src\Shopify.Api.Abstractions\obj\Debug\netcoreapp3.1\Shopify.Api.Abstractions.csprojAssemblyReference.cache
 D:\Work\ERP\Shopify.Api\src\Shopify.Api.Abstractions\obj\Debug\netcoreapp3.1\Shopify.Api.Abstractions.AssemblyInfoInputs.cache
 D:\Work\ERP\Shopify.Api\src\Shopify.Api.Abstractions\obj\Debug\netcoreapp3.1\Shopify.Api.Abstractions.AssemblyInfo.cs
 D:\Work\ERP\Shopify.Api\src\Shopify.Api.Abstractions\obj\Debug\netcoreapp3.1\Shopify.Api.Abstractions.csproj.CoreCompileInputs.cache

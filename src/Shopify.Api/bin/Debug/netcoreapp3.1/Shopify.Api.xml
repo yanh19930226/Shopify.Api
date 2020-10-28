@@ -20,9 +20,14 @@
             平台类型
             </summary>
         </member>
-        <member name="P:Shopify.Api.Models.Domain.Order.PlatformId">
+        <member name="P:Shopify.Api.Models.Domain.Order.PlatformOrderId">
             <summary>
             平台Id
+            </summary>
+        </member>
+        <member name="P:Shopify.Api.Models.Domain.Order.ShopId">
+            <summary>
+            店铺Id
             </summary>
         </member>
         <member name="P:Shopify.Api.Models.Domain.Order.Email">

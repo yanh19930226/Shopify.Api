@@ -12,11 +12,11 @@ namespace Shopify.SDK.Test
         private ShopifyClient _client;
 
         #region Shop
-        private string ApiUrl = "https://5ab2eea6cec93b40ecec4a82cdb9e275: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@gvabnck.myshopify.com";
+        private string ApiUrl = "https://c2afe34ad1ee8bf6372e0c16bf11262f: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@rtocty.myshopify.com";
 
-        private string apikey = "5ab2eea6cec93b40ecec4a82cdb9e275";
+        private string apikey = "c2afe34ad1ee8bf6372e0c16bf11262f";
 
-        private string apivalue = "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"; 
+        private string apivalue = "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"; 
         #endregion
 
         public ShopifyOrderTest()
@@ -30,7 +30,10 @@ namespace Shopify.SDK.Test
         [Fact]
         public async Task GetOrderList()
         {
-            var res = await _client.GetRequestAsync<OrderListResponse>(new OrderRequest(ApiUrl,apikey,apivalue));
+            var res = await _client.GetRequestAsync<OrderListResponse>(new OrderRequest(ApiUrl, apikey, apivalue) { 
+                 created_at_min=DateTime.Now.AddHours(-6),
+                 created_at_max=DateTime.Now
+            });
             Assert.True(res.orders.Count > 0);
         }
         /// <summary>
